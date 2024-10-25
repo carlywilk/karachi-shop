@@ -1,0 +1,76 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+
+.footer {
+    background-color: black;
+
+    @include tablet_breakpoint {
+
+    }
+
+    @include desktop_breakpoint {
+        
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet_breakpoint {
+
+        }
+
+        @include desktop_breakpoint {
+
+        }
+
+    }
+
+    &__socials {
+
+        @include tablet_breakpoint {
+
+        }
+
+        @include desktop_breakpoint {
+            
+        }
+    }
+
+    &__icon {
+
+        @include tablet_breakpoint {
+
+        }
+
+        @include desktop_breakpoint {
+            width: 2.5rem;
+        }
+    }
+
+    &__logo {
+        padding: 0 1rem;
+        @include tablet_breakpoint {
+
+        }
+
+        @include desktop_breakpoint {
+            padding: 0 2rem;
+            width: 10rem;
+        }
+    }
+
+    &__copyright {
+        color: $primary-white;
+        text-align: center;
+
+        @include tablet_breakpoint {
+
+        }
+
+        @include desktop_breakpoint {
+            
+        }
+    }
+}
