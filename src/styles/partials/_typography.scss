@@ -1,0 +1,105 @@
+
+// mobile
+@mixin mh1 {
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    font-weight: 700;
+    @content;
+}
+
+@mixin mh2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin mh3 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin mb {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    @content;
+}
+
+@mixin msb {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+// tablet
+@mixin th1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin th2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin th3 {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin tb {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 400;
+    @content;
+}
+
+@mixin tsb {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+// desktop
+@mixin dh1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin dh2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin dh3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    @content;
+}
+
+@mixin db {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 400;
+    @content;
+}
+
+@mixin dsb {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}

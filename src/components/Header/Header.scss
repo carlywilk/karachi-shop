@@ -1,0 +1,67 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
+.header {
+    padding: 1rem;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+
+    @include tablet_breakpoint {
+        padding: 2rem;
+        max-width: 60rem;
+    }
+
+    @include desktop_breakpoint {
+        max-width: 70rem;
+    }
+
+    &__nav {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        // align-items: flex-start;
+        align-items: center;
+
+        @include tablet_breakpoint {
+            // flex-direction: row;
+            // align-items: center;
+        }
+
+        @include desktop_breakpoint {
+
+        }
+    }
+
+    &__button {
+        padding: 0;
+        background: none;
+        border: none;
+        color: $primary-white;
+        @include mh3;
+        font-weight: 400;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.3125rem;
+        }
+
+        @include tablet_breakpoint {
+            @include th3;
+            font-weight: 400;
+        }
+
+        @include desktop_breakpoint {
+            @include dh3;
+            font-weight: 400;
+        }
+    }
+}

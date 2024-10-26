@@ -14,7 +14,7 @@ export function Footer() {
                 <a className="footer__socials" href="https://www.instagram.com/karachishop/" target="_blank">
                     <img className="footer__icon" src={IgLogo} alt="Instagram logo" />
                 </a>
-                <Link to="/">
+                <Link className="footer__link" to="/">
                     <img className="footer__logo" src={KarachiShopLogo} alt="Karachi Shop Logo" />
                 </Link>
                 <a className="footer__socials" href="https://www.facebook.com/karachishop.yasir/" target="_blank">
