@@ -1,0 +1,35 @@
+@use "../../styles/partials/breakpoints" as *;
+
+.landing {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    &__image {
+        height: 100vh;
+        object-fit: cover;
+
+        @include desktop_breakpoint {
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 15rem;
+        height: auto;
+        opacity: 0.9;
+
+        @include tablet_breakpoint {
+            max-width: 30rem;
+        }
+
+        @include desktop_breakpoint {
+            max-width: 45rem;
+        }
+    }
+}
