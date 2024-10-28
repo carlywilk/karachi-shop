@@ -1,4 +1,46 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
 .about {
     height: 100vh;
-    background-color: pink;
+    background-image: url("../../assets/images/jason-dent-tgXbBVhVxEs-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    &__overlay-image {
+        width: 100%;
+        height: 85vh;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    &__overlay-text {
+        position: absolute;
+        color: $primary-white;
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.75);
+        @include mb;
+
+        @include tablet_breakpoint {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            @include tb;
+        }
+
+        @include desktop_breakpoint {
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            width: 35rem;
+            @include db;
+        }
+    }
 }
