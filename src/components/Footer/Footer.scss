@@ -4,9 +4,11 @@
 
 .footer {
     &__content {
+        margin: 1rem 0;
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 
     &__icon {
@@ -52,6 +54,7 @@
     }
 
     &__copyright {
+        padding-bottom: 0.25rem;
         color: $primary-white;
         text-align: center;
         @include msb;

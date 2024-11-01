@@ -9,7 +9,7 @@ export function Header() {
         if (element) {
             window.scrollTo({
                 behavior: "smooth",
-                top: element.offsetTop - 50,
+                top: element.offsetTop,
             });
         }
     };

@@ -28,36 +28,33 @@ export function Contact() {
     return (
         <section className="contact" id="contact-section">
             <form className="contact__form" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-                <div className="contact__name">
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="NAME"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div className="contact__email">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="EMAIL"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div className="contact__message">
-                    <textarea
-                        name="message"
-                        placeholder="MESSAGE"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
+                <input
+                    className="contact__name"
+                    type="text"
+                    name="name"
+                    placeholder="NAME"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                />
+                <input
+                    className="contact__email"
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                />
+                <textarea
+                    className="contact__message"
+                    name="message"
+                    placeholder="MESSAGE"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                     >
-                    </textarea>
-                </div>
+                </textarea>
                 <button className="contact__button">Submit</button>
                 {submitted && <p className="contact__thanks">Thank you for the message, please expect a response within 2 days!</p>}
             </form>
