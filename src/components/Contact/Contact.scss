@@ -1,4 +1,34 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
 .contact {
     height: 100vh;
-    background-color: green;
+    background-image: url("../../assets/images/Contact2-BW-slate.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    &__form {
+
+    }
+
+    &__name {
+
+    }
+
+    &__email {
+
+    }
+
+    &__message {
+
+    }
+
+    &__button {
+        text-transform: uppercase;
+    }
 }
+
