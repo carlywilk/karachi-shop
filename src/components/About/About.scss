@@ -27,7 +27,7 @@
         color: $primary-white;
         text-align: center;
         padding: 20px;
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: rgba(0, 0, 0, 0.85);
         @include mb;
 
         @include tablet_breakpoint {
@@ -44,6 +44,35 @@
             left: 50%;
             transform: translateY(-50%);
             width: 35rem;
+            @include db;
+        }
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        @include mh1;
+
+        @include tablet_breakpoint {
+            @include th1;
+        }
+
+        @include desktop_breakpoint {
+            @include dh1;
+        }
+    }
+
+    &__body-text {
+        padding-top: 1rem;
+        color: $primary-white;
+        text-align: center;
+        @include mb;
+
+        @include tablet_breakpoint {
+            padding-top: 2rem;
+            @include tb;
+        }
+
+        @include desktop_breakpoint {
             @include db;
         }
     }
