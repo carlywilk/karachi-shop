@@ -21,7 +21,7 @@ export function Footer() {
                     <img className="footer__icon" src={FbLogo} alt="Facebook logo" />
                 </a>
             </div>
-            <p className="footer__copyright">© Yasir Muhammed. 2024. All Rights Reserved.</p>
+            <p className="footer__copyright">© 2024 Yasir Muhammed. All Rights Reserved.</p>
         </section>
     );
 }
