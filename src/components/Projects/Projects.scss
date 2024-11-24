@@ -1,4 +1,63 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
 .projects {
     height: 100vh;
-    background-color: red;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__examples {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        // align-items: center;
+    }
+
+    &__image {
+        width: 100px;
+
+        @include desktop_breakpoint {
+            margin: 1rem 0;
+            width: 30%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    &__button {
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        padding: 0.5rem 1rem;
+        // border: 2px solid transparent;
+        background-color: rgba(255, 255, 255, 0.569);
+
+        @include mb;
+        font-weight: 600;
+        
+        @include tablet_breakpoint {
+            @include tb;
+            font-weight: 600;
+        }
+        
+        @include desktop_breakpoint {
+            @include db;
+            font-weight: 600;
+        }
+
+        &:hover {
+            // border: 2px solid $primary-black;
+            color: $primary-white;
+            background-color: $primary-black;
+        }
+
+        &:active {
+            color: $primary-white;
+            background-color: $primary-black;
+        }
+    }
 }
