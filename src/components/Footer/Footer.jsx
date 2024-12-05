@@ -11,13 +11,13 @@ export function Footer() {
     return (
         <section className="footer">
             <div className="footer__content">
-                <a className="footer__socials" href="https://www.instagram.com/karachishop/" target="_blank">
+                <a className="footer__socials" href="https://www.instagram.com/karachishop/" target="_blank" rel="noreferrer">
                     <img className="footer__icon" src={IgLogo} alt="Instagram logo" />
                 </a>
                 <Link className="footer__link" to="/">
                     <img className="footer__logo" src={KarachiShopLogo} alt="Karachi Shop Logo" />
                 </Link>
-                <a className="footer__socials" href="https://www.facebook.com/karachishop.yasir/" target="_blank">
+                <a className="footer__socials" href="https://www.facebook.com/karachishop.yasir/" target="_blank" rel="noreferrer">
                     <img className="footer__icon" src={FbLogo} alt="Facebook logo" />
                 </a>
             </div>
