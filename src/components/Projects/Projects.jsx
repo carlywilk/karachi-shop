@@ -16,8 +16,8 @@ export function Projects() {
                 <img className="projects__image" src={fillerTwo} alt="testImage" />
                 <img className="projects__image" src={fillerThree} alt="testImage" />
                 <img className="projects__image" src={fillerFour} alt="testImage" />
-                <img className="projects__image" src={fillerFive} alt="testImage" />
-                <img className="projects__image" src={fillerSix} alt="testImage" />
+                {/* <img className="projects__image" src={fillerFive} alt="testImage" />
+                <img className="projects__image" src={fillerSix} alt="testImage" /> */}
             </div>
             <button className="projects__button">Project Gallery</button>
             {/* link to a new page that shows a gallery of all projects completed? */}
