@@ -27,7 +27,7 @@ export function Contact() {
                     required
                     >
                 </textarea>
-                <button className="contact__button">Submit</button>
+                <button className="contact__button" type="submit">Submit</button>
             </form>
         </section>
     );
