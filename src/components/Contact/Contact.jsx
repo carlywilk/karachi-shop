@@ -1,7 +1,39 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import "./Contact.scss";
 
+export function Contact() {
+    return (
+        <section className="contact">
+            <form className="contact__form" name="contact" method="POST" action="/pages/FormSuccess" data-netlify="true">
+            <input
+                    className="contact__name"
+                    type="text"
+                    name="name"
+                    placeholder="NAME"
+                    required
+                />
+                <input
+                    className="contact__email"
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL"
+                    required
+                />
+                <textarea
+                    className="contact__message"
+                    name="message"
+                    placeholder="MESSAGE"
+                    required
+                    >
+                </textarea>
+                <button className="contact__button">Submit</button>
+            </form>
+        </section>
+    );
+}
+
+/*
 export function Contact() {
     const [formData, setFormData] = useState({
         name: "",
@@ -61,3 +93,4 @@ export function Contact() {
         </section>
     );
 }
+*/

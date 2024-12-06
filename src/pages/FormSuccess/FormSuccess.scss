@@ -1,0 +1,14 @@
+
+.success {
+    background-color: blue;
+
+    &__title {
+        color: yellow;
+        font-weight: 800;
+    }
+
+    &__text {
+        color: yellow;
+        font-weight: 400;
+    }
+}
