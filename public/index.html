@@ -49,6 +49,15 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Hidden form for Netlify to detect -->
+    <form hidden name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name"/>
+      <input type="email" name="email"/>
+      <textarea name="message"></textarea>
+      <button>Submit</button>
+    </form>
+
     <div id="root"></div>
   </body>
 </html>
