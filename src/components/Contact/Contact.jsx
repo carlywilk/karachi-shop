@@ -5,9 +5,10 @@ import "./Contact.scss";
 
 export function Contact() {
     return (
-        <section className="contact">
+        <section className="contact" id="contact-section">
             <form className="contact__form" name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="redirect" value="/success" /> 
             <input
                     className="contact__name"
                     type="text"
@@ -53,8 +54,6 @@ export function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log("Form submitted:", formData); // testing to see if form works
 
         setSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
