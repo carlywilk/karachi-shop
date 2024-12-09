@@ -1,11 +1,10 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 import "./Contact.scss";
 
 export function Contact() {
-    const [submitted, setSubmitted] = useState(false);
     const formRef = useRef(null);
 
     const handleSubmit = (event) => {
@@ -23,8 +22,6 @@ export function Contact() {
         if (formRef.current) {
             formRef.current.reset();
         }
-
-        setSubmitted(true);
     };
 
     return (
