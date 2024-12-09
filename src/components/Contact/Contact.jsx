@@ -16,10 +16,7 @@ export function Contact() {
             style: {
                 backgroundColor: "black",
                 color: "white",
-                width: "500px",
-            },
-            progressStyle: {
-                backgroundColor: "white",
+                width: "550px",
             }
         });
 
@@ -55,13 +52,11 @@ export function Contact() {
                     required
                     >
                 </textarea>
-                <button className="contact__button" type="submit" disabled={submitted}>
-                    {submitted ? "Submitted" : "Submit"}
-                </button>
+                <button className="contact__button" type="submit">Submit</button>
             </form>
             <ToastContainer
-                position="top-center"
-                autoClose={5000}
+                position="top-left"
+                autoClose={6000}
                 hideProgressBar={true}
                 newestOnTop={false}
                 closeOnClick
