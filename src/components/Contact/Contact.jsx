@@ -1,24 +1,38 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./Contact.scss";
 
-
 export function Contact() {
     const [submitted, setSubmitted] = useState(false);
+    const formRef = useRef(null);
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        setSubmitted(true);
+        toast.success("Thank you for your message! Please expect a response within 2 days.", {
+            icon: false,
+            style: {
+                backgroundColor: "black",
+                color: "white",
+                width: "500px",
+            },
+            progressStyle: {
+                backgroundColor: "white",
+            }
+        });
 
-        setTimeout(() => {
-            setSubmitted(false);
-        }, 5000);
+        if (formRef.current) {
+            formRef.current.reset();
+        }
+
+        setSubmitted(true);
     };
 
     return (
         <section className="contact" id="contact-section">
-            <form className="contact__form" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+            <form className="contact__form" ref={formRef} name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <input
                     className="contact__name"
@@ -41,76 +55,22 @@ export function Contact() {
                     required
                     >
                 </textarea>
-                <button className="contact__button" type="submit">Submit</button>
+                <button className="contact__button" type="submit" disabled={submitted}>
+                    {submitted ? "Submitted" : "Submit"}
+                </button>
             </form>
-
-            {submitted && (
-                <div className="contact__modal">
-                    <h1 className="contact__thank-header">Thank you for your message!</h1>
-                    <p className="success__text">Please expect a response within 2 business days.</p>
-                </div>
-            )}
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={true}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </section>
     );
 }
-
-
-/*
-export function Contact() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-
-    const [submitted, setSubmitted] = useState(false);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setSubmitted(true);
-        setFormData({ name: "", email: "", message: "" });
-    };
-
-    return (
-        <section className="contact" id="contact-section">
-            <form className="contact__form" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-                <input
-                    className="contact__name"
-                    type="text"
-                    name="name"
-                    placeholder="NAME"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
-                <input
-                    className="contact__email"
-                    type="email"
-                    name="email"
-                    placeholder="EMAIL"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-                <textarea
-                    className="contact__message"
-                    name="message"
-                    placeholder="MESSAGE"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    >
-                </textarea>
-                <button className="contact__button">Submit</button>
-                {submitted && <p className="contact__thanks">Thank you for the message, please expect a response within 2 days!</p>}
-            </form>
-        </section>
-    );
-}
-*/
