@@ -7,8 +7,8 @@ import "./Contact.scss";
 export function Contact() {
     const formRef = useRef(null);
 
-    const handleSubmit = (event) => {
-        // event.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
 
         toast.success("Thank you for your message! Please expect a response within 2 days.", {
             icon: false,
@@ -21,6 +21,24 @@ export function Contact() {
 
         if (formRef.current) {
             formRef.current.reset();
+        }
+
+        const formData = new FormData(formRef.current);
+
+        try {
+            const response = await fetch("/", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (response.ok) {
+                toast.success("Form successfully submitted!");
+            } else {
+                throw new Error("Form submission failed!");
+            }
+        } catch (error) {
+            toast.error("There was an issue submitting the form.");
+            console.error("Form submission error:", error);
         }
     };
 
