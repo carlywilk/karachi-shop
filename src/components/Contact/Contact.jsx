@@ -8,7 +8,7 @@ export function Contact() {
     const formRef = useRef(null);
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
 
         toast.success("Thank you for your message! Please expect a response within 2 days.", {
             icon: false,
