@@ -4,7 +4,7 @@ import "./Contact.scss";
 export function Contact() {
     return (
         <section className="contact" id="contact-section">
-            <form className="contact__form" name="contact" method="POST" data-netlify="true">
+            <form className="contact__form" name="contact" method="POST" data-netlify="true" action="/thank-you" >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="redirect" value="/thank-you.html" />
             <input
