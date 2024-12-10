@@ -10,10 +10,14 @@ export function Projects() {
     return (
         <section className="projects" id="projects-section">
             <div className="projects__examples">
-                <img className="projects__image" src={fillerOne} alt="testImage" />
-                <img className="projects__image" src={fillerTwo} alt="testImage" />
-                <img className="projects__image" src={fillerThree} alt="testImage" />
-                <img className="projects__image" src={fillerFour} alt="testImage" />
+                <div className="projects__upper">
+                    <img className="projects__image" src={fillerOne} alt="testImage" />
+                    <img className="projects__image projects__image--spaced" src={fillerTwo} alt="testImage" />
+                </div>
+                <div className="projects__lower">
+                    <img className="projects__image" src={fillerThree} alt="testImage" />
+                    <img className="projects__image projects__image--spaced" src={fillerFour} alt="testImage" />
+                </div>
             </div>
         </section>
     )

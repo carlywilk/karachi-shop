@@ -3,77 +3,62 @@
 @use "../../styles/partials/typography" as *;
 
 .projects {
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    @include desktop_breakpoint {
+    margin-top: 2rem;
+
+    @include tablet_breakpoint {
         height: 100vh;
     }
 
     &__examples {
         display: flex;
         flex-direction: column;
-
-        flex-wrap: wrap;
-        justify-content: space-evenly;
         align-items: center;
-        
+
+        @include tablet_breakpoint {
+            height: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         @include tablet_breakpoint {
             flex-direction: row;
+            justify-content: space-between;
+
         }
-        // align-items: center;
+    }
+
+    &__lower {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet_breakpoint {
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
     }
     
     &__image {
-        margin: 1rem 0;
-        width: 90%;
-        max-height: 15rem;
+        margin-bottom: 2rem;
+        width: 80%;
         object-fit: cover;
+        max-height: 40vh;
 
         @include tablet_breakpoint {
-            width: 40%;
+            width: 20rem;
             height: 20rem;
         }
 
-        @include desktop_breakpoint {
-            margin: 2rem 0;
-            max-height: 20rem;;
-        }
-    }
-
-    &__button {
-        text-transform: uppercase;
-        outline: none;
-        border: none;
-        padding: 0.5rem 1rem;
-        // border: 2px solid transparent;
-        background-color: rgba(255, 255, 255, 0.569);
-
-        @include mb;
-        font-weight: 600;
-        
-        @include tablet_breakpoint {
-            @include tb;
-            font-weight: 600;
-        }
-        
-        @include desktop_breakpoint {
-            @include db;
-            font-weight: 600;
-        }
-
-        &:hover {
-            // border: 2px solid $primary-black;
-            color: $primary-white;
-            background-color: $primary-black;
-        }
-
-        &:active {
-            color: $primary-white;
-            background-color: $primary-black;
+        &--spaced {
+            @include tablet_breakpoint {
+                margin-left: 2rem;
+            }
         }
     }
 }
