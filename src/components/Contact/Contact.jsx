@@ -45,7 +45,7 @@ export function Contact() {
     return (
         <section className="contact" id="contact-section">
             <form className="contact__form" ref={formRef} name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="contact" />
+            {/* <input type="hidden" name="form-name" value="contact" /> */}
             <input
                     className="contact__name"
                     type="text"
