@@ -6,5 +6,5 @@ export function PageNotFound() {
         <>
             <p>this page is not found</p>
         </>
-    )
+    );
 }

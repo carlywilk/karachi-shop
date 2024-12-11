@@ -6,6 +6,7 @@ import "./ForSale.scss";
 export function ForSale() {
     return (
         <section className="sale" id="sale-section">
+            <h1 className="sale__title">For Sale</h1>
             <div className="sale__bike">
                 <img className="sale__image" src={exampleOne} alt="" />
                 <p className="sale__description sale__description--right-aligned">bike description; this is a sample image used to design the site prior to client providing assets</p>

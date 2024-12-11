@@ -9,6 +9,7 @@ import "./Projects.scss";
 export function Projects() {
     return (
         <section className="projects" id="projects-section">
+            <h1 className="projects__title">My Work</h1>
             <div className="projects__examples">
                 <div className="projects__upper">
                     <img className="projects__image" src={fillerOne} alt="testImage" />

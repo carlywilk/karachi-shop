@@ -20,5 +20,5 @@ export function HomePage() {
             <Contact />
             <Footer />
         </>
-    )
+    );
 }

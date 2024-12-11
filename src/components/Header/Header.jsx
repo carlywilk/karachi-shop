@@ -23,5 +23,5 @@ export function Header() {
                     <button className="header__button" onClick={() => scrollTo("contact-section")}>Contact</button>
             </nav>
         </section>
-    )
+    );
 }

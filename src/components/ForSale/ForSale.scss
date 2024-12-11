@@ -3,9 +3,7 @@
 @use "../../styles/partials/typography" as *;
 
 .sale {
-    // height: 100vh;
-    // background-color: $primary-black;
-    background-color: darkslategray;
+    background-color: $primary-black;
     padding: 2rem 1rem 0;
     display: flex;
     flex-direction: column;
@@ -15,6 +13,20 @@
     @include tablet_breakpoint {
         height: 100vh;
         justify-content: space-around;
+    }
+
+    &__title {
+        @include mh1;
+        color: $primary-white;
+        text-transform: uppercase;
+
+        @include tablet_breakpoint {
+            @include th1;
+        }
+
+        @include desktop_breakpoint {
+            @include dh1;
+        }
     }
     
     &__bike {
@@ -26,6 +38,10 @@
         @include tablet_breakpoint {
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        @include desktop_breakpoint {
+            max-width: 80rem;
         }
 
         &--flipped {
@@ -41,6 +57,10 @@
         max-height: 15rem;
         object-fit: cover;
         object-position: center;
+
+        @include tablet_breakpoint {
+            max-height: 20rem;
+        }
     }
     
     &__description {
@@ -53,13 +73,21 @@
             @include tb;
         }
 
+        @include desktop_breakpoint {
+            @include db;
+        }
+
         &--right-aligned {
-            text-align: right;
-            padding-left: 2rem;
+            @include tablet_breakpoint {
+                text-align: right;
+                padding-left: 2rem;
+            }
         }
 
         &--left-aligned {
-            padding-right: 2rem;
+            @include tablet_breakpoint {
+                padding-right: 2rem;
+            }
         }
     }
 }

@@ -13,6 +13,21 @@
         margin-top: 3rem;
     }
 
+    &__title {
+        @include mh1;
+        color: $primary-white;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include tablet_breakpoint {
+            @include th1;
+        }
+
+        @include desktop_breakpoint {
+            @include dh1;
+        }
+    }
+
     &__examples {
         display: flex;
         flex-direction: column;
