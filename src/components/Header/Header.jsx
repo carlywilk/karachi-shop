@@ -1,7 +1,9 @@
+import { useState } from "react";
 
 import "./Header.scss";
 
 export function Header() {
+    const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
     const scrollTo = (id) => {
         const element = document.getElementById(id);
@@ -16,6 +18,7 @@ export function Header() {
 
     return (
         <section className="header">
+
             <nav className="header__nav">
                     <button className="header__button" onClick={() => scrollTo("about-section")}>About</button>
                     <button className="header__button" onClick={() => scrollTo("projects-section")}>Projects</button>
