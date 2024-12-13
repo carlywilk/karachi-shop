@@ -6,20 +6,23 @@
     margin-top: 2rem;
 
     @include tablet_breakpoint {
-        height: 100vh;
+        // margin-bottom: 3rem;
     }
-
+    
     @include desktop_breakpoint {
+        // height: 100vh;
         margin-top: 3rem;
     }
 
     &__title {
+        padding-bottom: 1.5rem;
         @include mh1;
         color: $primary-white;
         text-transform: uppercase;
         text-align: center;
 
         @include tablet_breakpoint {
+            padding-bottom: 2rem;
             @include th1;
         }
 
@@ -81,7 +84,7 @@
         margin-bottom: 2rem;
         width: 80%;
         object-fit: cover;
-        max-height: 40vh;
+        max-height: 20rem;
 
         @include tablet_breakpoint {
             width: 20rem;
@@ -95,6 +98,10 @@
         &--spaced {
             @include tablet_breakpoint {
                 margin-left: 2rem;
+            }
+
+            @include desktop_breakpoint {
+                margin-left: 0rem;
             }
         }
     }
