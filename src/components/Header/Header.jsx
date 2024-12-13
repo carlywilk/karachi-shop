@@ -1,9 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import "./Header.scss";
 
 export function Header() {
-    const [hamburgerOpen, setHamburgerOpen] = useState(false);
+    // const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
     const scrollTo = (id) => {
         const element = document.getElementById(id);
