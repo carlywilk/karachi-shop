@@ -26,6 +26,7 @@
         text-align: center;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 0.25rem;
         @include mb;
 
         @include tablet_breakpoint {
@@ -67,6 +68,21 @@
 
         @include tablet_breakpoint {
             padding-top: 2rem;
+            @include tb;
+        }
+
+        @include desktop_breakpoint {
+            @include db;
+        }
+    }
+
+    &__sign-off {
+        padding: 1rem 2rem 0 0;
+        color: $primary-white;
+        text-align: right;
+        @include mb;
+
+        @include tablet_breakpoint {
             @include tb;
         }
 
