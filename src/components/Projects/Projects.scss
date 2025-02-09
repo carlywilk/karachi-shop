@@ -31,20 +31,109 @@
         }
     }
 
-    &__examples {
-        margin: 0 auto;
+    &__container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        // width: 80%;
 
         @include tablet_breakpoint {
-            // height: 100%;
-            // justify-content: center;
-        }
-        
-        @include desktop_breakpoint {
-            // width: 100%;
+            margin: 0 auto;
+            width: 80%;
         }
     }
+
+    &__rowOne {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet_breakpoint {
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__rowTwo {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet_breakpoint {
+            margin: 2rem 0 0 0;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__project {
+        padding: 0 1rem;
+
+        @include tablet_breakpoint {
+            // width: 50%;
+        }
+
+        &--spaced {
+            margin: 1.5rem 0;
+
+            @include tablet_breakpoint {
+                margin: 0;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        
+        @include tablet_breakpoint {
+            width: 20rem;
+            height: 20rem;
+            object-fit: cover;
+        }
+    }
+
+    &__name {
+        @include mh3;
+        color: $primary_white;
+
+        @include tablet_breakpoint {
+            width: 20rem;
+            // height: 20rem;
+            @include th3;
+        }
+
+        @include desktop_breakpoint {
+            @include dh3;
+        }
+        
+    }
+
+    &__info {
+        @include mb;
+        color: $primary_white;
+
+        @include tablet_breakpoint {
+            width: 20rem;
+            // height: 20rem;
+            @include tb;
+        }
+
+        @include desktop_breakpoint {
+            @include db;
+        }
+    }
+
+    // &__examples {
+    //     margin: 0 auto;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     width: 80%;
+
+    //     @include tablet_breakpoint {
+    //         height: 100%;
+    //         justify-content: center;
+    //     }
+        
+    //     @include desktop_breakpoint {
+    //         width: 100%;
+    //     }
+    // }
 }

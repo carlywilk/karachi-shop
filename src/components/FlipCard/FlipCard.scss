@@ -9,6 +9,12 @@
     transform-style: preserve-3d;
     transition: transform 0.6s;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet_breakpoint {
+        flex-direction: row;
+    }
 
     &__container {
         perspective: 1000px;
@@ -27,15 +33,22 @@
     }
 
     &__front {
-        background-color: #fff;
+        // background-color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     &__image {
+        margin: 1rem 0;
         width: 100%;
         height: auto;
+        
+
+        @include tablet_breakpoint {
+            width: 40%;
+            flex-direction: row;
+        }
 
         &--grayscale {
             filter: grayscale(100%);
