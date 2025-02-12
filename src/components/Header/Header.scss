@@ -10,14 +10,17 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    
+    @include tablet_breakpoint {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 
     &__nav {
-        display: flex;
-        flex-direction: column;
+        display: none;
 
         @include tablet_breakpoint {
             margin: 0 auto;
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
             max-width: 60rem;
@@ -60,6 +63,96 @@
         @include desktop_breakpoint {
             @include dh3;
             font-weight: 500;
+        }
+    }
+}
+
+.header {
+    &__hamburger-container {
+        position: relative;
+        left: 90%;
+
+        @include tablet_breakpoint {
+            display: none;
+        }
+    }
+
+    &__hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        .header__bar {
+            width: 30px;
+            height: 4px;
+            background-color: $primary-white;
+            border-radius: 4px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        &.header__open .header__bar:nth-child(1) {
+            transform: rotate(45deg);
+            position: relative;
+            top: 10px;
+        }
+
+        &.header__open .header__bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.header__open .header__bar:nth-child(3) {
+            transform: rotate(-45deg);
+            position: relative;
+            top: -10px;
+        }
+
+        @include tablet_breakpoint {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 90%;
+        // background-color: $primary-black;
+        background-color: rgba(0, 0, 0, 0.5);
+        // width: 200px;
+        width: fit-content;
+        // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+
+        &.header__open {
+            display: block;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 20px;
+        }
+
+        li p {
+            text-decoration: none;
+            color: $primary-white;
+        }
+
+        li p:hover {
+            color: #007bff;
+        }
+
+        @include tablet_breakpoint {
+            display: none;
         }
     }
 }

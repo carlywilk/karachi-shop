@@ -34,27 +34,35 @@
     &__container {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         @include tablet_breakpoint {
             margin: 0 auto;
             width: 80%;
+        }
+
+        @include desktop_breakpoint {
+            width: 100%;
+            max-width: 60rem;
         }
     }
 
     &__rowOne {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         @include tablet_breakpoint {
             flex-direction: row;
             justify-content: space-between;
-
         }
+
     }
 
     &__rowTwo {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         @include tablet_breakpoint {
             margin: 2rem 0 0 0;
@@ -87,27 +95,17 @@
             height: 20rem;
             object-fit: cover;
         }
+
+        @include desktop_breakpoint {
+            // width: 25rem;
+            // height: 25rem;
+        }
     }
 
     &__name {
-        @include mh3;
-        color: $primary_white;
-
-        @include tablet_breakpoint {
-            width: 20rem;
-            // height: 20rem;
-            @include th3;
-        }
-
-        @include desktop_breakpoint {
-            @include dh3;
-        }
-        
-    }
-
-    &__info {
         @include mb;
         color: $primary_white;
+        text-align: center;
 
         @include tablet_breakpoint {
             width: 20rem;
@@ -117,6 +115,23 @@
 
         @include desktop_breakpoint {
             @include db;
+        }
+        
+    }
+
+    &__info {
+        @include msb;
+        color: $primary_white;
+        text-align: center;
+
+        @include tablet_breakpoint {
+            width: 20rem;
+            // height: 20rem;
+            @include tsb;
+        }
+
+        @include desktop_breakpoint {
+            @include dsb;
         }
     }
 
