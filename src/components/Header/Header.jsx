@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./Header.scss";
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -20,8 +21,27 @@ export function Header() {
         }
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const triggerHeightTop = 750;
+            const triggerHeightBottom = 3300;
+
+            if (scrollTop > triggerHeightTop && scrollTop < triggerHeightBottom) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    },[]);
+
     return (
-        <section className="header">
+        <section className={`header ${scrolled ? "scrolled" : ""}`}>
             <nav className="header__nav">
                     <button className="header__button" onClick={() => scrollTo("about-section")}>About</button>
                     <button className="header__button" onClick={() => scrollTo("projects-section")}>Projects</button>

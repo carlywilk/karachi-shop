@@ -155,4 +155,9 @@
             display: none;
         }
     }
+
+    &.scrolled {
+        background-color: $primary-black;
+        color: $primary-white;
+    }
 }
