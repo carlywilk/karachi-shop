@@ -11,11 +11,17 @@
     width: 100%;
 
     @include tablet_breakpoint {
+        padding: 3rem 1rem 1rem;
         height: 100vh;
         justify-content: space-around;
     }
 
+    @include desktop_breakpoint {
+        padding: 5rem 1rem 2rem;
+    }
+
     &__title {
+        padding-bottom: 1rem;
         @include mh1;
         color: $primary-white;
         text-transform: uppercase;

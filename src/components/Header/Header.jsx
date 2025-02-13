@@ -25,7 +25,7 @@ export function Header() {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
             const triggerHeightTop = 750;
-            const triggerHeightBottom = 3300;
+            const triggerHeightBottom = 3250;
 
             if (scrollTop > triggerHeightTop && scrollTop < triggerHeightBottom) {
                 setScrolled(true);

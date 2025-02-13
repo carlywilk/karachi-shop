@@ -20,14 +20,16 @@
 
     &__prompt {
         margin: 0 1rem;
-        padding: 0.5rem;
+        // padding: 0.5rem;
+        width: 100%;
         @include mb;
+        background-color: rgba(0, 0, 0, 0.5);
         color: $primary-white;
         text-transform: uppercase;
         text-align: center;
 
         @include tablet_breakpoint {
-            padding: 1rem;
+            padding: 0;
             width: 40rem;
             @include tb;
         }
@@ -40,16 +42,17 @@
             text-align: left;
         }
 
-        &--spaced {
+        &--spaced-upper {
+            padding-top: 0.5rem;
+        }
 
-            @include desktop_breakpoint {
-                padding: 0 0 0.5rem 1rem;
-            }
+        &--spaced-lower {
+            padding-bottom: 0.5rem;
         }
     }
     
     &__form {
-        margin: 0 1rem;
+        margin: 0.5rem 1rem 0 1rem;
         padding: 0.5rem;
         width: 100%;
         display: flex;
@@ -65,7 +68,7 @@
 
         @include desktop_breakpoint {
             width: 30rem;
-            margin: 0 0 0 10rem;
+            margin: 0.5rem 0 0 10rem;
         }
     }
 
