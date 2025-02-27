@@ -25,7 +25,7 @@
         @include mb;
         background-color: rgba(0, 0, 0, 0.5);
         color: $primary-white;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         text-align: center;
 
         @include tablet_breakpoint {
@@ -138,6 +138,7 @@
         border: none;
         padding: 0.5rem 1rem;
         background-color: rgba(255, 255, 255, 0.569);
+        color: $primary-black;
 
         @include mb;
         font-weight: 600;
