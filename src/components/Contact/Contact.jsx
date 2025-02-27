@@ -4,7 +4,7 @@ import "./Contact.scss";
 export function Contact() {
     return (
         <section className="contact" id="contact-section">
-            <p className="contact__prompt contact__prompt--spaced-upper">For questions, inquiries, or if you'd like to get in touch, use the form below.</p>
+            <p className="contact__prompt contact__prompt--spaced-upper">For questions, inquiries, or to get in touch, use the form below.</p>
             {/* <p className="contact__prompt contact__prompt--spaced-lower">Reach out for more details:</p> */}
             <form className="contact__form" name="contact" action="/success" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
